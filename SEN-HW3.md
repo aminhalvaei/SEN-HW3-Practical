@@ -1,7 +1,90 @@
 # Amin Halvaei - SEN HW3 - 403206865
 
 ## Q1
+### Part A: Prove that the Diameter i  
+$\frac{\log n}{\log \gamma}$
 
+The Erdős-Rényi model, denoted $G(n, p)$, constructs a graph with $n$ nodes where each possible edge between pairs of nodes exists independently with probability $p$. The average degree $\gamma$ is the expected number of edges incident to a node. Since each node can connect to $n - 1$ other nodes, and each edge appears with probability $p$, the average degree is:  
+$\gamma = (n - 1)p$  
+For large $n$, this approximates to:  
+$\gamma \approx np$  
+Thus, the edge probability is:  
+$p \approx \frac{\gamma}{n}$
+
+The diameter of a graph is the longest shortest path between any two nodes. In random graphs, the diameter depends on the connectivity regime, which is determined by $p$ (or equivalently, $\gamma$). The formula $\frac{\log n}{\log \gamma}$ suggests a connected graph or a focus on the giant component, so let’s explore this.
+
+----------
+
+### Connectivity Regimes
+
+In the Erdős-Rényi model:
+
+-   If $p < \frac{(1 - \epsilon)\log n}{n}$ (i.e., $\gamma < (1 - \epsilon)\log n$), the graph is almost surely disconnected.
+    
+-   If $p > \frac{(1 + \epsilon)\log n}{n}$ (i.e., $\gamma > (1 + \epsilon)\log n$), the graph is almost surely connected.
+    
+-   If $p = \frac{\gamma}{n}$ with $\gamma$ fixed and constant, then $\gamma$ is typically less than $\log n$ for large $n$, placing us in the supercritical regime ($\gamma > 1$) where a giant component exists, but the graph may not be fully connected.
+    
+
+Since the problem states the diameter is $\frac{\log n}{\log \gamma}$, a finite value, it likely assumes either:
+
+-   The graph is connected (requiring $\gamma > \log n$), or
+    
+-   The diameter refers to the giant component when $\gamma > 1$ is fixed (common in random graph theory).
+    
+
+Let’s assume $p = \frac{\gamma}{n}$ with $\gamma > 1$ fixed, and consider the giant component’s diameter, adjusting later if needed.
+
+----------
+
+### Diameter via Branching Process
+
+In the supercritical regime ($\gamma > 1$), the graph has a giant component containing a positive fraction of nodes (size $\approx \rho n$, where $\rho$ depends on $\gamma$). To estimate the diameter, consider how distances grow from a node in the giant component.
+
+Starting at a node:
+
+-   Distance 1: The expected number of neighbors is $\gamma$.
+    
+-   Distance 2: Each neighbor has approximately $\gamma$ new neighbors, yielding $\gamma^2$ nodes, assuming minimal overlap.
+    
+-   Distance $k$: The number of nodes reached is $\gamma^k$, valid when $\gamma^k \ll n$.
+    
+
+The diameter is the smallest $k$ such that any two nodes in the giant component are within distance $k$. If $\gamma^k \approx n$, most nodes are reachable:  
+$\gamma^k \approx n$  
+Taking natural logarithms:  
+$k \log \gamma \approx \log n$  
+$k \approx \frac{\log n}{\log \gamma}$
+
+This $k$ estimates the distance at which the neighborhood covers a significant portion of the graph. In random graph theory, for $p = \frac{\gamma}{n}$ with $\gamma > 1$, the diameter of the giant component is indeed asymptotically almost surely (a.a.s.):  
+$d \approx \frac{\log n}{\log \gamma}$
+
+----------
+
+### Rigorous Insight
+
+More formally, the neighborhood expansion resembles a branching process with mean offspring $\gamma$. The diameter is the maximum distance between nodes in the giant component. Standard results (e.g., Bollobás, _Random Graphs_) show that for $p = \frac{\gamma}{n}$ and $\gamma > 1$, the diameter $d$ satisfies:  
+$d = (1 + o(1)) \frac{\log n}{\log \gamma}$
+
+The $o(1)$ term vanishes as $n \to \infty$, so $d \approx \frac{\log n}{\log \gamma}$. This holds for the giant component, suggesting the problem interprets “diameter of the graph” as the diameter of the giant component when $\gamma > 1$.
+
+----------
+
+### Connected Case
+
+If the graph is fully connected ($\gamma > \log n$), say $p = \frac{c \log n}{n}$ with $c > 1$, then $\gamma \approx c \log n$, and:  
+$d \approx \frac{\log n}{\log (c \log n)} = \frac{\log n}{\log c + \log \log n}$
+
+This is smaller than $\frac{\log n}{\log \gamma}$ with fixed $\gamma$, indicating the given formula aligns with the giant component in the sparse regime.
+
+----------
+
+### Conclusion for Part A
+
+Given the exact formula $\frac{\log n}{\log \gamma}$, the most consistent interpretation is that for $p = \frac{\gamma}{n}$ with $\gamma > 1$, the diameter of the giant component is:  
+$d = \frac{\log n}{\log \gamma}$
+
+**Proof Sketch**: In $G(n, p)$ with $p = \frac{\gamma}{n}$ and $\gamma > 1$, the giant component’s neighborhood grows as $\gamma^k$. The diameter is the smallest $k$ where distances between most pairs of nodes are at most $k$, which probabilistic methods confirm is $\frac{\log n}{\log \gamma}$ a.a.s.
 
 
 ## Q2
@@ -714,6 +797,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MjA0OTE0LC0yMTg5MDUxNTMsMTM0ND
-gxODM5M119
+eyJoaXN0b3J5IjpbLTE5NDYwNjM0OTksMjE0MjA0OTE0LC0yMT
+g5MDUxNTMsMTM0NDgxODM5M119
 -->
