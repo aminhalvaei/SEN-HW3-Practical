@@ -634,7 +634,7 @@ A distinct connected 3-regular graph with 8 nodes (e.g., Wagner graph-like).
     -   **Count:** 9
     -   **Nodes:** {0,1,2,3}, {0,1,3,5}, {0,1,3,4}, {0,1,3,6}, {0,3,5,6}, {2,3,5,6}, {1,3,5,6}, {3,4,5,6}, {3,5,6,7}
 
-###Part B
+### Part B
 **Motif M1**  
 **Step 1: Calculate the Mean ($\bar{x}_1$)**  
 The frequencies for Motif M1 are 9,8,1,6,8,13,6,8,3,99, 8, 1, 6, 8, 13, 6, 8, 3, 99,8,1,6,8,13,6,8,3,9. First, compute the sum:  
@@ -644,10 +644,10 @@ $\bar{x}_1 = \frac{71}{10} = 7.1$
 
 **Step 2: Calculate the Sample Standard Deviation ($s_1$)**  
 The sample standard deviation is given by:  
-s=1n−1∑i=1n(xi−xˉ)2s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}s=n−11​∑i=1n​(xi​−xˉ)2​  
+$s=1n−1∑i=1n(xi−xˉ)2s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}s=n−11​∑i=1n​(xi​−xˉ)2$​  
 where $n - 1 = 9$. Compute the squared differences from the mean:
 
-$9 - 7.1 = 1.9$, $1.9^2 = 3.61$  
+>$9 - 7.1 = 1.9$, $1.9^2 = 3.61$  
 $8 - 7.1 = 0.9$, $0.9^2 = 0.81$  
 $1 - 7.1 = -6.1$, $(-6.1)^2 = 37.21$  
 $6 - 7.1 = -1.1$, $(-1.1)^2 = 1.21$  
@@ -661,11 +661,11 @@ $9 - 7.1 = 1.9$, $1.9^2 = 3.61$
 Sum of squared differences:  
 $3.61 + 0.81 + 37.21 + 1.21 + 0.81 + 34.81 + 1.21 + 0.81 + 16.81 + 3.61 = 100.9$  
 Now, calculate $s_1$:  
-s1=100.99=11.2111≈3.348s_1 = \sqrt{\frac{100.9}{9}} = \sqrt{11.2111} \approx 3.348s1​=9100.9​​=11.2111​≈3.348
+$s1=100.99=11.2111≈3.348s_1 = \sqrt{\frac{100.9}{9}} = \sqrt{11.2111} \approx 3.348s1​=9100.9​​=11.2111​≈3.348$
 
 **Step 3: Calculate the Standard Error**  
 The standard error of the mean is:  
-s1n=3.34810≈3.3483.162≈1.059\frac{s_1}{\sqrt{n}} = \frac{3.348}{\sqrt{10}} \approx \frac{3.348}{3.162} \approx 1.059n​s1​​=10​3.348​≈3.1623.348​≈1.059
+$s1n=3.34810≈3.3483.162≈1.059\frac{s_1}{\sqrt{n}} = \frac{3.348}{\sqrt{10}} \approx \frac{3.348}{3.162} \approx 1.059n​s1​​=10​3.348​≈3.1623.348​≈1.059$
 
 **Step 4: Calculate the Z-Score**  
 Using $\mu_0 = 0$:  
@@ -685,7 +685,7 @@ $\bar{x}_2 = \frac{61}{10} = 6.1$
 **Step 2: Calculate the Sample Standard Deviation ($s_2$)**  
 Compute the squared differences from the mean:
 
-$7 - 6.1 = 0.9$, $0.9^2 = 0.81$  
+>$7 - 6.1 = 0.9$, $0.9^2 = 0.81$  
 $5 - 6.1 = -1.1$, $(-1.1)^2 = 1.21$  
 $7 - 6.1 = 0.9$, $0.9^2 = 0.81$  
 $6 - 6.1 = -0.1$, $(-0.1)^2 = 0.01$  
@@ -714,6 +714,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NzE0NDcyNCwtMjE4OTA1MTUzLDEzND
-Q4MTgzOTNdfQ==
+eyJoaXN0b3J5IjpbLTEwOTA1Mjg4LC0yMTg5MDUxNTMsMTM0ND
+gxODM5M119
 -->
