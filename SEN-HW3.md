@@ -634,7 +634,9 @@ A distinct connected 3-regular graph with 8 nodes (e.g., Wagner graph-like).
     -   **Count:** 9
     -   **Nodes:** {0,1,2,3}, {0,1,3,5}, {0,1,3,4}, {0,1,3,6}, {0,3,5,6}, {2,3,5,6}, {1,3,5,6}, {3,4,5,6}, {3,5,6,7}
 
+###Part B
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzkzMzQ2MCwtMjE4OTA1MTUzLDEzND
-Q4MTgzOTNdfQ==
+eyJoaXN0b3J5IjpbLTEwNzk2MjMzNzYsLTIxODkwNTE1MywxMz
+Q0ODE4MzkzXX0=
 -->
