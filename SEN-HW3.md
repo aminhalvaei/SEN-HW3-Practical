@@ -113,6 +113,7 @@ Now, let’s assess the diameter based on $\gamma$’s value, using $p = \frac{\
     $d \approx \frac{\log n}{\log \gamma}$  
     This holds a.a.s. as $n \to \infty$.
 
+
 ## Q2
 Both graphs have 6 nodes, so the number of possible triplets (combinations of 3 nodes) is 20. We will examine all 20 triplets in each graph to classify them into graphlet types.
 >-   **Empty Graphlet:** 0 edges
@@ -823,6 +824,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMzNjkxOTgyLDIxNDIwNDkxNCwtMjE4OT
-A1MTUzLDEzNDQ4MTgzOTNdfQ==
+eyJoaXN0b3J5IjpbLTQyMDQ1OTU2LDkzMzY5MTk4MiwyMTQyMD
+Q5MTQsLTIxODkwNTE1MywxMzQ0ODE4MzkzXX0=
 -->
