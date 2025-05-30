@@ -352,11 +352,11 @@ Kleinberg showed that when long-range links follow a specific distance-based pro
 
 **Relation to Six Degrees of Separation:**
 
--   The **"six degrees of separation"** theory claims that any two people are connected through roughly six steps.
+-   The "six degrees of separation" theory claims that any two people are connected through roughly six steps.
     
--   Kleinberg’s model supports this by demonstrating how **long-range connections** serve as shortcuts in the network, dramatically reducing the average path length.
+-   Kleinberg’s model supports this by demonstrating how long-range connections serve as shortcuts in the network, dramatically reducing the average path length.
     
--   This results in a **small-world structure**, where high local clustering coexists with short global paths—exactly the kind of connectivity observed in Milgram’s famous small-world experiments.
+-   This results in a small-world structure, where high local clustering coexists with short global paths—exactly the kind of connectivity observed in Milgram’s famous small-world experiments.
     
 
 In Conclusion Kleinberg’s model provides a mathematical explanation for the balance between local community ties and global connectivity in social networks. It shows how a small number of strategically distributed long-range links enable the short paths underlying the six degrees of separation, making it a powerful framework for understanding real-world social structures.
@@ -377,7 +377,6 @@ In Conclusion Kleinberg’s model provides a mathematical explanation for the ba
 -   **Example**: In an Erdős–Rényi random graph, node degrees follow a binomial distribution, which approximates a normal distribution for large nnn.
     
 
-----------
 
 ### **Power-Law Distribution**
 
@@ -453,11 +452,11 @@ PageRank is an algorithm originally developed to rank web pages, but it’s high
 
 HITS takes a different approach by assigning two roles to papers: hubs and authorities.
 
--   **How it Works**: Each paper gets two scores:
-    -   **Authority Score**: Measures how much a paper is cited by good hubs. A high authority score means it’s a key resource.
-    -   **Hub Score**: Measures how well a paper cites good authorities. A high hub score might indicate a review paper linking to important works.
+-   How it Works: Each paper gets two scores:
+    -   Authority Score: Measures how much a paper is cited by good hubs. A high authority score means it’s a key resource.
+    -   Hub Score: Measures how well a paper cites good authorities. A high hub score might indicate a review paper linking to important works.
     -   The algorithm iterates: authority scores are updated based on the hub scores of citing papers, and hub scores are updated based on the authority scores of cited papers, until the scores stabilize.
--   **Application**: In your network, HITS can find both authoritative papers (e.g., widely cited research) and hub papers (e.g., surveys citing many key works). This dual perspective can refine your search by highlighting different types of importance.
+-   Application: In your network, HITS can find both authoritative papers (e.g., widely cited research) and hub papers (e.g., surveys citing many key works). This dual perspective can refine your search by highlighting different types of importance.
 
 #### Differences Between PageRank and HITS
 
@@ -833,6 +832,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwMTcxODI0LDkzMzY5MTk4MiwyMTQyMD
-Q5MTQsLTIxODkwNTE1MywxMzQ0ODE4MzkzXX0=
+eyJoaXN0b3J5IjpbMTE0Njc2NTc1OCw5MzM2OTE5ODIsMjE0Mj
+A0OTE0LC0yMTg5MDUxNTMsMTM0NDgxODM5M119
 -->
