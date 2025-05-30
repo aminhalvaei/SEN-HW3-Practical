@@ -669,8 +669,8 @@ s1n=3.34810≈3.3483.162≈1.059\frac{s_1}{\sqrt{n}} = \frac{3.348}{\sqrt{10}} \
 
 **Step 4: Calculate the Z-Score**  
 Using $\mu_0 = 0$:  
-z1=xˉ1−μ0s1n=7.1−01.059≈6.705z_1 = \frac{\bar{x}_1 - \mu_0}{\frac{s_1}{\sqrt{n}}} = \frac{7.1 - 0}{1.059} \approx 6.705z1​=n​s1​​xˉ1​−μ0​​=1.0597.1−0​≈6.705
+$z1=xˉ1−μ0s1n=7.1−01.059≈6.705z_1 = \frac{\bar{x}_1 - \mu_0}{\frac{s_1}{\sqrt{n}}} = \frac{7.1 - 0}{1.059} \approx 6.705z1​=n​s1​​xˉ1​−μ0​​=1.0597.1−0​≈6.705$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjUwMTA4OCwtMjE4OTA1MTUzLDEzND
+eyJoaXN0b3J5IjpbMTIzMTU0NTM4NCwtMjE4OTA1MTUzLDEzND
 Q4MTgzOTNdfQ==
 -->
