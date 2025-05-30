@@ -13,7 +13,6 @@ $p \approx \frac{\gamma}{n}$
 
 The diameter of a graph is the longest shortest path between any two nodes. In random graphs, the diameter depends on the connectivity regime, which is determined by $p$ (or equivalently, $\gamma$). The formula $\frac{\log n}{\log \gamma}$ suggests a connected graph or a focus on the giant component, so let’s explore this.
 
-----------
 
 ### Connectivity Regimes
 
@@ -35,7 +34,6 @@ Since the problem states the diameter is $\frac{\log n}{\log \gamma}$, a finite 
 
 Let’s assume $p = \frac{\gamma}{n}$ with $\gamma > 1$ fixed, and consider the giant component’s diameter, adjusting later if needed.
 
-----------
 
 ### Diameter via Branching Process
 
@@ -59,7 +57,6 @@ $k \approx \frac{\log n}{\log \gamma}$
 This $k$ estimates the distance at which the neighborhood covers a significant portion of the graph. In random graph theory, for $p = \frac{\gamma}{n}$ with $\gamma > 1$, the diameter of the giant component is indeed asymptotically almost surely (a.a.s.):  
 $d \approx \frac{\log n}{\log \gamma}$
 
-----------
 
 ### Rigorous Insight
 
@@ -68,7 +65,6 @@ $d = (1 + o(1)) \frac{\log n}{\log \gamma}$
 
 The $o(1)$ term vanishes as $n \to \infty$, so $d \approx \frac{\log n}{\log \gamma}$. This holds for the giant component, suggesting the problem interprets “diameter of the graph” as the diameter of the giant component when $\gamma > 1$.
 
-----------
 
 ### Connected Case
 
@@ -77,7 +73,6 @@ $d \approx \frac{\log n}{\log (c \log n)} = \frac{\log n}{\log c + \log \log n}$
 
 This is smaller than $\frac{\log n}{\log \gamma}$ with fixed $\gamma$, indicating the given formula aligns with the giant component in the sparse regime.
 
-----------
 
 ### Conclusion for Part A
 
@@ -90,7 +85,6 @@ $d = \frac{\log n}{\log \gamma}$
 
 Now, let’s assess the diameter based on $\gamma$’s value, using $p = \frac{\gamma}{n}$.
 
-----------
 
 ### Case 1: $\gamma < 1$ (Subcritical Regime)
 
@@ -113,6 +107,21 @@ Now, let’s assess the diameter based on $\gamma$’s value, using $p = \frac{\
     $d \approx \frac{\log n}{\log \gamma}$  
     This holds a.a.s. as $n \to \infty$.
 
+**Interpretation**  
+Since Part A specifies $\frac{\log n}{\log \gamma}$, and Part B contrasts $\gamma < 1$ and $\gamma > 1$, the diameter likely refers to the giant component when it exists ($\gamma > 1$), and the full graph otherwise.
+
+----------
+
+**Final Answer**
+
+**Part A:**  
+In the Erdős-Rényi model with $n$ nodes and average degree $\gamma > 1$, the diameter of the giant component is proven to be $\frac{\log n}{\log \gamma}$ using the branching process approximation, where neighborhoods expand exponentially until covering the component.
+
+**Part B:**
+
+-   If $\gamma < 1$, the graph is disconnected, so the diameter is $\infty$.
+    
+-   If $\gamma > 1$, the diameter of the giant component is $\frac{\log n}{\log \gamma}$.
 
 ## Q2
 Both graphs have 6 nodes, so the number of possible triplets (combinations of 3 nodes) is 20. We will examine all 20 triplets in each graph to classify them into graphlet types.
@@ -824,6 +833,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMDQ1OTU2LDkzMzY5MTk4MiwyMTQyMD
-Q5MTQsLTIxODkwNTE1MywxMzQ0ODE4MzkzXX0=
+eyJoaXN0b3J5IjpbMTgzNjU4MDY4Miw5MzM2OTE5ODIsMjE0Mj
+A0OTE0LC0yMTg5MDUxNTMsMTM0NDgxODM5M119
 -->
