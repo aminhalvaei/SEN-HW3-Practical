@@ -670,7 +670,50 @@ s1n=3.34810≈3.3483.162≈1.059\frac{s_1}{\sqrt{n}} = \frac{3.348}{\sqrt{10}} \
 **Step 4: Calculate the Z-Score**  
 Using $\mu_0 = 0$:  
 $z1=xˉ1−μ0s1n=7.1−01.059≈6.705z_1 = \frac{\bar{x}_1 - \mu_0}{\frac{s_1}{\sqrt{n}}} = \frac{7.1 - 0}{1.059} \approx 6.705z1​=n​s1​​xˉ1​−μ0​​=1.0597.1−0​≈6.705$
+
+**Step 5: Compare with Threshold**  
+Since $6.705 > 1.150$, Motif M1 is statistically over-represented.
+
+**Motif M2**
+
+**Step 1: Calculate the Mean ($\bar{x}_2$)**  
+The frequencies for Motif M2 are [7, 5, 7, 6, 8, 5, 0, 7, 9, 7]. Compute the sum:  
+$7 + 5 + 7 + 6 + 8 + 5 + 0 + 7 + 9 + 7 = 61$  
+With 10 observations, the mean is:  
+$\bar{x}_2 = \frac{61}{10} = 6.1$
+
+**Step 2: Calculate the Sample Standard Deviation ($s_2$)**  
+Compute the squared differences from the mean:
+
+$7 - 6.1 = 0.9$, $0.9^2 = 0.81$  
+$5 - 6.1 = -1.1$, $(-1.1)^2 = 1.21$  
+$7 - 6.1 = 0.9$, $0.9^2 = 0.81$  
+$6 - 6.1 = -0.1$, $(-0.1)^2 = 0.01$  
+$8 - 6.1 = 1.9$, $1.9^2 = 3.61$  
+$5 - 6.1 = -1.1$, $(-1.1)^2 = 1.21$  
+$0 - 6.1 = -6.1$, $(-6.1)^2 = 37.21$  
+$7 - 6.1 = 0.9$, $0.9^2 = 0.81$  
+$9 - 6.1 = 2.9$, $2.9^2 = 8.41$  
+$7 - 6.1 = 0.9$, $0.9^2 = 0.81$
+
+Sum of squared differences:  
+$0.81 + 1.21 + 0.81 + 0.01 + 3.61 + 1.21 + 37.21 + 0.81 + 8.41 + 0.81 = 54.9$
+
+Now, calculate $s_2$:  
+$s_2 = \sqrt{\frac{54.9}{9}} = \sqrt{6.1} \approx 2.469$
+
+**Step 3: Calculate the Standard Error**  
+$\frac{s_2}{\sqrt{n}} = \frac{2.469}{\sqrt{10}} \approx \frac{2.469}{3.162} \approx 0.781$
+
+**Step 4: Calculate the Z-Score**  
+Using $\mu_0 = 0$:  
+$z_2 = \frac{\bar{x}_2 - \mu_0}{\frac{s_2}{\sqrt{n}}} = \frac{6.1 - 0}{0.781} \approx 7.810$
+
+**Step 5: Compare with Threshold**  
+Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTU0NTM4NCwtMjE4OTA1MTUzLDEzND
+eyJoaXN0b3J5IjpbLTk3NzE0NDcyNCwtMjE4OTA1MTUzLDEzND
 Q4MTgzOTNdfQ==
 -->
