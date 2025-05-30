@@ -13,6 +13,7 @@ $p \approx \frac{\gamma}{n}$
 
 The diameter of a graph is the longest shortest path between any two nodes. In random graphs, the diameter depends on the connectivity regime, which is determined by $p$ (or equivalently, $\gamma$). The formula $\frac{\log n}{\log \gamma}$ suggests a connected graph or a focus on the giant component, so let’s explore this.
 
+   
 
 ### Connectivity Regimes
 
@@ -95,7 +96,6 @@ Now, let’s assess the diameter based on $\gamma$’s value, using $p = \frac{\
 -   **Diameter**: Since the components are small, the diameter of any component is also $O(\log n)$, but **the overall graph diameter is undefined** in the conventional sense due to disconnection.
     
 
-----------
 
 ### Case 2: $\gamma > 1$ (Supercritical Regime)
 
@@ -833,6 +833,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNjU4MDY4Miw5MzM2OTE5ODIsMjE0Mj
-A0OTE0LC0yMTg5MDUxNTMsMTM0NDgxODM5M119
+eyJoaXN0b3J5IjpbNDQwMTcxODI0LDkzMzY5MTk4MiwyMTQyMD
+Q5MTQsLTIxODkwNTE1MywxMzQ0ODE4MzkzXX0=
 -->
