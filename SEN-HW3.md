@@ -533,8 +533,108 @@ A distinct connected 3-regular graph with 8 nodes (e.g., Wagner graph-like).
 
 ## Q7
 
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+###Part A
+### Motif M1
+
+**Structure:**
+
+-   5 nodes, forming a specific topology:
+    -   Three nodes form a triangle (all pairwise connected).
+    -   One of these three nodes (call it the "hub") is connected to two additional nodes.
+    -   These two additional nodes are connected only to the hub and not to each other or the other two nodes in the triangle.
+
+**Analysis:** To find M1, I:
+
+1.  Identified all triangles in the graph (sets of three nodes where each pair is connected).
+2.  For each triangle X-Y-Z, selected one node (e.g., Z) as the hub.
+3.  Search for two nodes U and V such that:
+    -   U is connected to Z but not to X or Y.
+    -   V is connected to Z but not to X or Y.
+    -   U and V are not connected to each other.
+4.  Verified that the induced subgraph on {X, Y, Z, U, V} matches M1's topology.
+
+**Triangles in the Graph:**
+
+-   0-1-3
+-   0-2-3
+-   0-2-5
+-   0-3-5
+-   1-3-4
+-   1-3-6
+-   1-4-6
+-   2-3-5
+-   3-4-6
+-   3-5-6
+-   5-6-7
+
+**Findings:** After examining each triangle and testing all possible hub nodes:
+
+-   For example, in triangle 0-1-3 with Z=3, neighbors of 3 (0, 1, 2, 4, 5, 6) all connect to either 0 or 1, leaving no candidates.
+-   In triangle 0-2-5 with Z=5, neighbors 6 and 7 are candidates, but 6-7 exists, violating the condition.
+-   In triangle 5-6-7 with Z=6, candidates 1 and 4 have edge 1-4, and so on.
+-   No configuration yielded two nodes U and V meeting all criteria across all triangles.
+
+**Result:**
+
+-   **Count:** 0
+-   **Nodes:** None
+
+### Motif M2
+
+**Structure:**
+
+-   4 nodes forming two triangles sharing an edge:
+    -   Nodes can be labeled A, B, C, D where:
+        -   A-B-C is a triangle.
+        -   B-C-D is a triangle.
+        -   A and D are not connected.
+-   This forms a 4-node subgraph with 5 edges (a complete graph on 4 nodes minus one edge).
+
+**Analysis:** To find M2, I:
+
+1.  For each edge B-C in the graph, found all nodes W forming triangles B-C-W.
+2.  Identified pairs of triangles B-C-X and B-C-Y sharing edge B-C, where X and Y (the non-shared nodes) are not connected.
+3.  Verified that {X, B, C, Y} forms the M2 topology.
+
+**Occurrences:**
+
+-   **Edge 0-3:** Triangles 0-1-3, 0-2-3, 0-3-5
+    -   Pairs: {1, 2} (no 1-2), {1, 5} (no 1-5)
+    -   Sets: {0, 1, 2, 3}, {0, 1, 3, 5}
+-   **Edge 1-3:** Triangles 0-1-3, 1-3-4, 1-3-6
+    -   Pairs: {0, 4} (no 0-4), {0, 6} (no 0-6)
+    -   Sets: {0, 1, 3, 4}, {0, 1, 3, 6}
+-   **Edge 3-5:** Triangles 0-3-5, 2-3-5, 3-5-6
+    -   Pairs: {0, 6} (no 0-6), {2, 6} (no 2-6)
+    -   Sets: {0, 3, 5, 6}, {2, 3, 5, 6}
+-   **Edge 3-6:** Triangles 1-3-6, 3-4-6, 3-5-6
+    -   Pairs: {1, 5} (no 1-5), {4, 5} (no 4-5)
+    -   Sets: {1, 3, 5, 6}, {3, 4, 5, 6}
+-   **Edge 5-6:** Triangles 3-5-6, 5-6-7
+    -   Pair: {3, 7} (no 3-7)
+    -   Set: {3, 5, 6, 7}
+
+**Verification:** Each set has exactly 5 edges, with the missing edge between the non-shared nodes, matching M2:
+
+-   {0, 1, 2, 3}: Edges 0-1, 0-2, 0-3, 1-3, 2-3; no 1-2
+-   {0, 1, 3, 5}: Edges 0-1, 0-3, 0-5, 1-3, 3-5; no 1-5
+-   And so on, all confirmed.
+
+**Result:**
+
+-   **Count:** 9
+-   **Nodes:** {0,1,2,3}, {0,1,3,5}, {0,1,3,4}, {0,1,3,6}, {0,3,5,6}, {2,3,5,6}, {1,3,5,6}, {3,4,5,6}, {3,5,6,7}
+
+### Final Results
+
+-   **Motif M1:**
+    -   **Count:** 0
+    -   **Nodes:** None
+-   **Motif M2:**
+    -   **Count:** 9
+    -   **Nodes:** {0,1,2,3}, {0,1,3,5}, {0,1,3,4}, {0,1,3,6}, {0,3,5,6}, {2,3,5,6}, {1,3,5,6}, {3,4,5,6}, {3,5,6,7}
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxODkwNTE1MywxMzQ0ODE4MzkzXX0=
+eyJoaXN0b3J5IjpbLTQxODg4NDMwOCwtMjE4OTA1MTUzLDEzND
+Q4MTgzOTNdfQ==
 -->
