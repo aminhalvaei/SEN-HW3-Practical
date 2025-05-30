@@ -533,7 +533,7 @@ A distinct connected 3-regular graph with 8 nodes (e.g., Wagner graph-like).
 
 ## Q7
 
-###Part A
+### Part A
 ### Motif M1
 
 **Structure:**
@@ -714,6 +714,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA1Mjg4LC0yMTg5MDUxNTMsMTM0ND
+eyJoaXN0b3J5IjpbMjE0MjA0OTE0LC0yMTg5MDUxNTMsMTM0ND
 gxODM5M119
 -->
