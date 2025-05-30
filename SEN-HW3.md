@@ -86,6 +86,32 @@ $d = \frac{\log n}{\log \gamma}$
 
 **Proof Sketch**: In $G(n, p)$ with $p = \frac{\gamma}{n}$ and $\gamma > 1$, the giant component’s neighborhood grows as $\gamma^k$. The diameter is the smallest $k$ where distances between most pairs of nodes are at most $k$, which probabilistic methods confirm is $\frac{\log n}{\log \gamma}$ a.a.s.
 
+**Part B: Evaluate the Diameter if $\gamma < 1$ or $\gamma > 1$**
+
+Now, let’s assess the diameter based on $\gamma$’s value, using $p = \frac{\gamma}{n}$.
+
+----------
+
+### Case 1: $\gamma < 1$ (Subcritical Regime)
+
+-   **Connectivity**: When $p = \frac{\gamma}{n}$ and $\gamma < 1$, $p$ is below the critical threshold $\frac{1}{n}$ for the emergence of a giant component.
+    
+-   **Structure**: The graph consists mostly of small tree-like components. The largest component typically has size $O(\log n)$.
+    
+-   **Diameter**: Since the components are small, the diameter of any component is also $O(\log n)$, but **the overall graph diameter is undefined** in the conventional sense due to disconnection.
+    
+
+----------
+
+### Case 2: $\gamma > 1$ (Supercritical Regime)
+
+-   **Connectivity**: A giant component emerges, containing a linear fraction of the nodes.
+    
+-   **Structure**: The giant component dominates, and the rest consists of small isolated components.
+    
+-   **Diameter**: As shown earlier, the diameter of the giant component is:  
+    $d \approx \frac{\log n}{\log \gamma}$  
+    This holds a.a.s. as $n \to \infty$.
 
 ## Q2
 Both graphs have 6 nodes, so the number of possible triplets (combinations of 3 nodes) is 20. We will examine all 20 triplets in each graph to classify them into graphlet types.
@@ -797,6 +823,6 @@ Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDYwNjM0OTksMjE0MjA0OTE0LC0yMT
-g5MDUxNTMsMTM0NDgxODM5M119
+eyJoaXN0b3J5IjpbOTMzNjkxOTgyLDIxNDIwNDkxNCwtMjE4OT
+A1MTUzLDEzNDQ4MTgzOTNdfQ==
 -->
