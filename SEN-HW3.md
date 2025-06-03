@@ -830,8 +830,38 @@ $z_2 = \frac{\bar{x}_2 - \mu_0}{\frac{s_2}{\sqrt{n}}} = \frac{6.1 - 0}{0.781} \a
 **Step 5: Compare with Threshold**  
 Since $7.810 > 1.150$, Motif M2 is statistically over-represented.
 
+```mermaid
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+```
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0Njc2NTc1OCw5MzM2OTE5ODIsMjE0Mj
-A0OTE0LC0yMTg5MDUxNTMsMTM0NDgxODM5M119
+eyJoaXN0b3J5IjpbLTE2NDEwMzI4MSwxMTQ2NzY1NzU4LDkzMz
+Y5MTk4MiwyMTQyMDQ5MTQsLTIxODkwNTE1MywxMzQ0ODE4Mzkz
+XX0=
 -->
